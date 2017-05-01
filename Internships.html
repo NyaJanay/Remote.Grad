@@ -6,6 +6,8 @@
        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> 
 
        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <style>
     .map {
       opacity:.5;
@@ -42,8 +44,67 @@
             <input type="text" placeholder="Search Internships">
             <input type="image" width="20px" src="Magnifying Glass.png"> 
         </section>
-      
   </header>
+
+
+      <div class="w3-sidebar w3-bar-block w3-light-grey" style="width:25%">
+       <a href="Remote.Grad.html" class="w3-bar-item w3-button">Home</a>
+        <a href="Internships.html" class="w3-bar-item w3-button w3-hover-black">Internships</a>
+        <a href="Jobs.html" class="w3-bar-item w3-button w3-hover-green">Jobs</a>
+        <a href="#" class="w3-bar-item w3-button w3-hover-blue">About</a>
+         <a href="#" class="w3-bar-item w3-button w3-hover-red">Contact</a>
+        </div>
+
+<div style="margin-left:25%">
+
+<div class="w3-container w3-dark-grey">
+  
+</div>
+
+      <div class="w3-content" style="max-width:800px">
+        <img class="mySlides" src="Internship1..png" style="width:100%">
+        <img class="mySlides" src="Internship2..png" style="width:100%">
+        <img class="mySlides" src="Internship3..png" style="width:100%">
+      </div>
+
+        <div class="w3-center">
+          <div class="w3-section">
+          <button class="w3-button w3-light-grey" onclick="plusDivs(-1)"> Prev</button>
+          <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next </button>
+        </div>
+
+          <button class="w3-button demo" onclick="currentDiv(1)">1</button> 
+          <button class="w3-button demo" onclick="currentDiv(2)">2</button> 
+          <button class="w3-button demo" onclick="currentDiv(3)">3</button> 
+        </div>
+  <script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-red", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-red";
+}
+</script>
 
 </body>
 </html>
